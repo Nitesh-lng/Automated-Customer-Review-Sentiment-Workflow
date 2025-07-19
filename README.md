@@ -150,6 +150,3 @@ nnitesh0101@gmail.com
 
 **Ready to transform customer feedback into actionable, positive experiences—at scale!**
 
-> **Cut & paste this into your `README.md`. Replace "yourmodule", your name/email, and GitHub link with your own, and you’re production-ready.**
-
-Sources
