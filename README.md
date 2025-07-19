@@ -10,35 +10,15 @@ Modern businesses must process and respond to a flood of customer reviews. Manua
 
 ## System Architecture
 
-```mermaid
-┌─────────────┐
-│   Review    │
-│   Input     │
-└─────┬───────┘
-      │
-      ▼
-┌─────────────┐
-│  Sentiment  │
-│  Analysis   │
-└─────┬───────┘
-      │
-      ▼
-   ┌─────┐ Positive  ┌─────────────┐
-   │ Is  ├──────────►│  Positive   │
-   │Pos? │           │  Response   │
-   └─┬───┘           └─────────────┘
-     │ Negative
-     ▼
-┌─────────────┐
-│  Issue      │
-│  Analysis   │
-└─────┬───────┘
-      │
-      ▼
-┌─────────────┐
-│  Response   │
-│  Generation │
-└─────────────┘
+```
+
+flowchart TD
+  A[Start] --> B[Sentiment Analysis Node]
+  B -- Positive --> C[Positive Response Node]
+  C --> F[End]
+  B -- Negative --> D[Diagnosis Node<br/>(Extract Issue, Tone, Urgency)]
+  D --> E[Custom Response Node]
+  E --> F[End]
 
 ```
 
